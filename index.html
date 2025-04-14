@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英语单词配对游戏</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>英语单词配对游戏</h1>
+        </header>
+        
+        <main>
+            <div id="main-menu" class="screen active">
+                <h2>主菜单</h2>
+                <button id="start-game" class="btn-primary">开始游戏</button>
+                <button id="select-level" class="btn-primary">选择关卡</button>
+                <button id="view-stats" class="btn-primary">查看成绩</button>
+                <button id="settings" class="btn-primary">设置</button>
+            </div>
+            
+            <div id="level-select" class="screen">
+                <h2>选择关卡</h2>
+                <div id="levels-container" class="grid-container">
+                    <!-- 关卡将通过JavaScript动态生成 -->
+                </div>
+                <button id="back-to-menu-from-levels" class="btn-secondary">返回</button>
+            </div>
+            
+            <div id="game-screen" class="screen">
+                <div class="game-header">
+                    <div class="score-container">
+                        <span>得分: </span>
+                        <span id="score">0</span>
+                    </div>
+                    <div class="stars-container">
+                        <span id="stars">★★★</span>
+                    </div>
+                    <div class="timer-container">
+                        <span>时间: </span>
+                        <span id="timer">60</span>
+                    </div>
+                </div>
+                
+                <div class="game-content">
+                    <div class="word-container">
+                        <h2 id="current-word">单词</h2>
+                        <p id="phonetic">/音标/</p>
+                    </div>
+                    
+                    <div id="images-container" class="grid-container">
+                        <!-- 图片选项将通过JavaScript动态生成 -->
+                    </div>
+                </div>
+                
+                <div class="feedback-container" id="feedback">
+                    <!-- 反馈信息 -->
+                </div>
+                
+                <button id="back-to-menu-from-game" class="btn-secondary">返回主菜单</button>
+            </div>
+            
+            <div id="stats-screen" class="screen">
+                <h2>游戏统计</h2>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <span>总得分: </span>
+                        <span id="total-score">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>已完成关卡: </span>
+                        <span id="completed-levels">0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span>正确率: </span>
+                        <span id="accuracy">0%</span>
+                    </div>
+                </div>
+                <button id="back-to-menu-from-stats" class="btn-secondary">返回</button>
+            </div>
+            
+            <div id="settings-screen" class="screen">
+                <h2>设置</h2>
+                <div class="settings-container">
+                    <div class="setting-item">
+                        <label for="sound-toggle">音效: </label>
+                        <input type="checkbox" id="sound-toggle" checked>
+                    </div>
+                    <div class="setting-item">
+                        <label for="music-toggle">背景音乐: </label>
+                        <input type="checkbox" id="music-toggle" checked>
+                    </div>
+                    <div class="setting-item">
+                        <label for="difficulty-select">难度: </label>
+                        <select id="difficulty-select">
+                            <option value="easy">简单</option>
+                            <option value="medium">中等</option>
+                            <option value="hard">困难</option>
+                        </select>
+                    </div>
+                </div>
+                <button id="reset-progress" class="btn-warning">重置进度</button>
+                <button id="back-to-menu-from-settings" class="btn-secondary">返回</button>
+            </div>
+        </main>
+        
+        <footer>
+            <div class="author-info">
+                <p>作者: 天天天天</p>
+                <p>微信: 17776264052</p>
+                <p>免责声明: 图片来自网络，如有侵权请联系删除</p>
+            </div>
+        </footer>
+    </div>
+    
+    <div id="overlay" class="hidden">
+        <div id="modal">
+            <h3 id="modal-title">提示</h3>
+            <p id="modal-content">内容</p>
+            <button id="modal-close" class="btn-primary">确定</button>
+        </div>
+    </div>
+    
+    <audio id="correct-sound" src="sounds/correct.mp3" preload="auto"></audio>
+    <audio id="wrong-sound" src="sounds/wrong.mp3" preload="auto"></audio>
+    <audio id="background-music" src="sounds/background.mp3" loop preload="auto"></audio>
+    
+    <script src="js/data.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

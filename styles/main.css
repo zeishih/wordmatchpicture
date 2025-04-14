@@ -1,0 +1,361 @@
+/* 基础样式 */
+:root {
+    --primary-color: #4eb5f1;
+    --secondary-color: #f19e4e;
+    --accent-color: #f14e4e;
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --light-gray: #e0e0e0;
+    --correct-color: #4CAF50;
+    --wrong-color: #F44336;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans SC', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-family: 'Ma Shan Zheng', cursive;
+    font-size: 3rem;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    border-top: 1px solid var(--light-gray);
+    padding-top: 20px;
+}
+
+/* 按钮样式 */
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 24px;
+    margin: 10px 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #3a9cd8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #d88a3a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-warning {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.btn-warning:hover {
+    background-color: #d83a3a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 屏幕样式 */
+.screen {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.screen.active {
+    display: flex;
+}
+
+/* 主菜单样式 */
+#main-menu {
+    min-height: 400px;
+    justify-content: center;
+}
+
+#main-menu button {
+    width: 200px;
+    margin: 10px 0;
+}
+
+/* 游戏界面样式 */
+.game-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: var(--light-gray);
+    border-radius: 5px;
+}
+
+.game-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.word-container {
+    margin: 20px 0;
+}
+
+#current-word {
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+
+#phonetic {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.image-option {
+    position: relative;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-option:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.image-option img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feedback-container {
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: none;
+}
+
+.feedback-container.correct {
+    background-color: rgba(76, 175, 80, 0.2);
+    color: var(--correct-color);
+    display: block;
+}
+
+.feedback-container.wrong {
+    background-color: rgba(244, 67, 54, 0.2);
+    color: var(--wrong-color);
+    display: block;
+}
+
+/* 关卡选择样式 */
+.level-item {
+    background-color: var(--light-gray);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.level-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.level-item.completed {
+    background-color: rgba(76, 175, 80, 0.2);
+}
+
+.level-item.locked {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #999;
+    cursor: not-allowed;
+}
+
+.level-number {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.level-stars {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+}
+
+/* 统计和设置屏幕样式 */
+.stats-container, .settings-container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.stat-item, .setting-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+/* 模态框样式 */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#overlay.hidden {
+    display: none;
+}
+
+#modal {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+#modal-title {
+    margin-bottom: 15px;
+}
+
+#modal-content {
+    margin-bottom: 20px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    #current-word {
+        font-size: 2.5rem;
+    }
+    
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .image-option {
+        height: 150px;
+    }
+    
+    .game-header {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .game-header > div {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    #current-word {
+        font-size: 2rem;
+    }
+    
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .image-option {
+        height: 180px;
+    }
+    
+    button {
+        padding: 10px 20px;
+    }
+    
+    #main-menu button {
+        width: 100%;
+    }
+} 

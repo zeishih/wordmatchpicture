@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "word": "lion",
+    "translation": "狮子",
+    "difficulty": "简单",
+    "category": "动物",
+    "image": "lion.jpeg",
+    "phonetic": "/ˈlaɪən/"
+  },
+  {
+    "id": 2,
+    "word": "sheep",
+    "translation": "羊",
+    "difficulty": "简单",
+    "category": "动物",
+    "image": "sheep.jpeg",
+    "phonetic": "/ʃiːp/"
+  },
+  {
+    "id": 3,
+    "word": "fish",
+    "translation": "鱼",
+    "difficulty": "简单",
+    "category": "动物",
+    "image": "fish.jpg",
+    "phonetic": "/fɪʃ/"
+  },
+  {
+    "id": 4,
+    "word": "black",
+    "translation": "黑色",
+    "difficulty": "简单",
+    "category": "颜色",
+    "image": "black.jpeg",
+    "phonetic": "/blæk/"
+  },
+  {
+    "id": 5,
+    "word": "man",
+    "translation": "男人",
+    "difficulty": "简单",
+    "category": "人物",
+    "image": "man.jpeg",
+    "phonetic": "/mæn/"
+  }
+] 
