@@ -25,8 +25,7 @@ class Game {
         // 音效和音乐设置
         this.settings = {
             soundEnabled: true,
-            musicEnabled: true,
-            difficulty: 'easy'
+            musicEnabled: true
         };
         
         // 加载设置
@@ -90,20 +89,8 @@ class Game {
         this.correctAnswers = 0;
         this.isGameActive = true;
         
-        // 设置计时器时间（根据难度调整）
-        switch(this.settings.difficulty) {
-            case 'easy':
-                this.remainingTime = 60;
-                break;
-            case 'medium':
-                this.remainingTime = 45;
-                break;
-            case 'hard':
-                this.remainingTime = 30;
-                break;
-            default:
-                this.remainingTime = 60;
-        }
+        // 设置计时器时间（固定60秒）
+        this.remainingTime = 60;
         
         // 开始计时器
         this.startTimer();
@@ -210,21 +197,8 @@ class Game {
         
         // 更新得分和答题记录
         if (isCorrect) {
-            // 根据难度设置得分
-            let points;
-            switch(this.settings.difficulty) {
-                case 'easy':
-                    points = 10;
-                    break;
-                case 'medium':
-                    points = 20;
-                    break;
-                case 'hard':
-                    points = 30;
-                    break;
-                default:
-                    points = 10;
-            }
+            // 固定得分为10分
+            let points = 10;
             
             this.score += points;
             this.correctAnswers++;
@@ -246,7 +220,7 @@ class Game {
         
         return {
             correct: isCorrect,
-            points: isCorrect ? (this.settings.difficulty === 'easy' ? 10 : this.settings.difficulty === 'medium' ? 20 : 30) : 0,
+            points: isCorrect ? 10 : 0,
             word: currentWord,
             isComplete: isComplete,
             nextWord: isComplete ? null : this.getCurrentWord()
@@ -266,7 +240,7 @@ class Game {
         }
         
         // 计算星级
-        const totalPossibleScore = this.words.length * (this.settings.difficulty === 'easy' ? 10 : this.settings.difficulty === 'medium' ? 20 : 30);
+        const totalPossibleScore = this.words.length * 10;
         const percentage = (this.score / totalPossibleScore) * 100;
         
         let stars;

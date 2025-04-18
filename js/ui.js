@@ -40,8 +40,7 @@ class UI {
         // 设置元素
         this.settingsElements = {
             soundToggle: document.getElementById('sound-toggle'),
-            musicToggle: document.getElementById('music-toggle'),
-            difficultySelect: document.getElementById('difficulty-select')
+            musicToggle: document.getElementById('music-toggle')
         };
         
         // 模态框元素
@@ -125,12 +124,6 @@ class UI {
         this.settingsElements.musicToggle.addEventListener('change', () => {
             game.updateSettings({
                 musicEnabled: this.settingsElements.musicToggle.checked
-            });
-        });
-        
-        this.settingsElements.difficultySelect.addEventListener('change', () => {
-            game.updateSettings({
-                difficulty: this.settingsElements.difficultySelect.value
             });
         });
         
@@ -237,7 +230,6 @@ class UI {
         // 更新设置界面
         this.settingsElements.soundToggle.checked = game.settings.soundEnabled;
         this.settingsElements.musicToggle.checked = game.settings.musicEnabled;
-        this.settingsElements.difficultySelect.value = game.settings.difficulty;
         
         // 显示设置屏幕
         this.showScreen(this.screens.settings);
