@@ -1,47 +1,802 @@
 [
   {
     "id": 1,
-    "word": "lion",
-    "translation": "狮子",
+    "word": "hi",
+    "translation": "你好",
     "difficulty": "简单",
-    "category": "动物",
-    "image": "lion.jpeg",
-    "phonetic": "/ˈlaɪən/"
+    "category": "问候",
+    "level": "welcome",
+    "image": "hi .jpeg",
+    "phonetic": "/haɪ/"
   },
   {
     "id": 2,
-    "word": "sheep",
-    "translation": "羊",
+    "word": "I",
+    "translation": "我",
     "difficulty": "简单",
-    "category": "动物",
-    "image": "sheep.jpeg",
-    "phonetic": "/ʃiːp/"
+    "category": "代词",
+    "level": "welcome",
+    "image": "I .jpeg",
+    "phonetic": "/aɪ/"
   },
   {
     "id": 3,
-    "word": "fish",
-    "translation": "鱼",
+    "word": "what",
+    "translation": "什么",
     "difficulty": "简单",
-    "category": "动物",
-    "image": "fish.jpg",
-    "phonetic": "/fɪʃ/"
+    "category": "疑问词",
+    "level": "welcome",
+    "image": "what.jpeg",
+    "phonetic": "/wɒt/"
   },
   {
     "id": 4,
-    "word": "black",
-    "translation": "黑色",
+    "word": "name",
+    "translation": "名字",
     "difficulty": "简单",
-    "category": "颜色",
-    "image": "black.jpeg",
-    "phonetic": "/blæk/"
+    "category": "名词",
+    "level": "welcome",
+    "image": "name.jpeg",
+    "phonetic": "/neɪm/"
   },
   {
     "id": 5,
-    "word": "man",
-    "translation": "男人",
+    "word": "hello",
+    "translation": "你好",
     "difficulty": "简单",
-    "category": "人物",
-    "image": "man.jpeg",
-    "phonetic": "/mæn/"
+    "category": "问候",
+    "level": "welcome",
+    "image": "hello.jpeg",
+    "phonetic": "/həˈləʊ/"
+  },
+  {
+    "id": 6,
+    "word": "goodbye",
+    "translation": "再见",
+    "difficulty": "简单",
+    "category": "问候",
+    "level": "welcome",
+    "image": "goodbye.jpeg",
+    "phonetic": "/ˌɡʊdˈbaɪ/"
+  },
+  {
+    "id": 7,
+    "word": "day",
+    "translation": "一天",
+    "difficulty": "简单",
+    "category": "时间",
+    "level": "welcome",
+    "image": "day.jpeg",
+    "phonetic": "/deɪ/"
+  },
+  {
+    "id": 8,
+    "word": "good",
+    "translation": "好的",
+    "difficulty": "简单",
+    "category": "形容词",
+    "level": "welcome",
+    "image": "good.jpeg",
+    "phonetic": "/ɡʊd/"
+  },
+  {
+    "id": 9,
+    "word": "morning",
+    "translation": "早晨/上午",
+    "difficulty": "简单",
+    "category": "时间",
+    "level": "welcome",
+    "image": "morning.jpeg",
+    "phonetic": "/ˈmɔːnɪŋ/"
+  },
+  {
+    "id": 10,
+    "word": "Ms",
+    "translation": "女士",
+    "difficulty": "简单",
+    "category": "称谓",
+    "level": "welcome",
+    "image": "MS.jpeg",
+    "phonetic": "/mɪz/"
+  },
+  {
+    "id": 11,
+    "word": "stand up",
+    "translation": "站起来",
+    "difficulty": "简单",
+    "category": "动作",
+    "level": "welcome",
+    "image": "stand up.png",
+    "phonetic": "/stænd ʌp/"
+  },
+  {
+    "id": 12,
+    "word": "sit down",
+    "translation": "坐下",
+    "difficulty": "简单",
+    "category": "动作",
+    "level": "welcome",
+    "image": "sit down.png",
+    "phonetic": "/sɪt daʊn/"
+  },
+  {
+    "id": 13,
+    "word": "open",
+    "translation": "打开",
+    "difficulty": "简单",
+    "category": "动作",
+    "level": "welcome",
+    "image": "open.jpeg",
+    "phonetic": "/ˈəʊpən/"
+  },
+  {
+    "id": 14,
+    "word": "book",
+    "translation": "书",
+    "difficulty": "简单",
+    "category": "物品",
+    "level": "welcome",
+    "image": "book.jpeg",
+    "phonetic": "/bʊk/"
+  },
+  {
+    "id": 15,
+    "word": "close",
+    "translation": "合上",
+    "difficulty": "简单",
+    "category": "动作",
+    "level": "welcome",
+    "image": "close.jpeg",
+    "phonetic": "/kləʊz/"
+  },
+  {
+    "id": 16,
+    "word": "point",
+    "translation": "指",
+    "difficulty": "简单",
+    "category": "动作",
+    "level": "welcome",
+    "image": "point.jpeg",
+    "phonetic": "/pɔɪnt/"
+  },
+  {
+    "id": 17,
+    "word": "listen",
+    "translation": "听",
+    "difficulty": "简单",
+    "category": "动作",
+    "level": "welcome",
+    "image": "listen.jpeg",
+    "phonetic": "/ˈlɪsn/"
+  },
+  {
+    "id": 18,
+    "word": "write",
+    "translation": "写",
+    "difficulty": "简单",
+    "category": "动作",
+    "level": "welcome",
+    "image": "write.jpeg",
+    "phonetic": "/raɪt/"
+  },
+  {
+    "id": 19,
+    "word": "let's",
+    "translation": "让我们",
+    "difficulty": "简单",
+    "category": "短语",
+    "level": "Unit 1",
+    "image": "let's.jpeg",
+    "phonetic": "/lets/"
+  },
+  {
+    "id": 20,
+    "word": "friend",
+    "translation": "朋友",
+    "difficulty": "简单",
+    "category": "名词",
+    "level": "Unit 1",
+    "image": "friend.jpeg",
+    "phonetic": "/frend/"
+  },
+  {
+    "id": 21,
+    "word": "meet",
+    "translation": "认识",
+    "difficulty": "简单",
+    "category": "动词",
+    "level": "Unit 1",
+    "image": "meet.jpeg",
+    "phonetic": "/miːt/"
+  },
+  {
+    "id": 22,
+    "word": "play",
+    "translation": "玩耍",
+    "difficulty": "简单",
+    "category": "动词",
+    "level": "Unit 1",
+    "image": "play.jpeg",
+    "phonetic": "/pleɪ/"
+  },
+  {
+    "id": 23,
+    "word": "happy",
+    "translation": "快乐的",
+    "difficulty": "简单",
+    "category": "形容词",
+    "level": "Unit 1",
+    "image": "happy.jpg",
+    "phonetic": "/ˈhæpi/"
+  },
+  {
+    "id": 24,
+    "word": "new",
+    "translation": "新的",
+    "difficulty": "简单",
+    "category": "形容词",
+    "level": "Unit 1",
+    "image": "new.jpeg",
+    "phonetic": "/njuː/"
+  },
+  {
+    "id": 25,
+    "word": "welcome",
+    "translation": "欢迎",
+    "difficulty": "简单",
+    "category": "名词/动词",
+    "level": "Unit 1",
+    "image": "welcome.jpeg",
+    "phonetic": "/ˈwelkəm/"
+  },
+  {
+    "id": 26,
+    "word": "nine",
+    "translation": "九",
+    "difficulty": "简单",
+    "category": "数字",
+    "level": "Unit 1",
+    "image": "nine.jpeg",
+    "phonetic": "/naɪn/"
+  },
+  {
+    "id": 27,
+    "word": "she",
+    "translation": "她",
+    "difficulty": "简单",
+    "category": "代词",
+    "level": "Unit 1",
+    "image": "she.jpeg",
+    "phonetic": "/ʃiː/"
+  },
+  {
+    "id": 28,
+    "word": "too",
+    "translation": "也",
+    "difficulty": "简单",
+    "category": "副词",
+    "level": "Unit 1",
+    "image": "too.jpeg",
+    "phonetic": "/tuː/"
+  },
+  {
+    "id": 29,
+    "word": "we",
+    "translation": "我们",
+    "difficulty": "简单",
+    "category": "代词",
+    "level": "Unit 1",
+    "image": "we.jpeg",
+    "phonetic": "/wiː/"
+  },
+  {
+    "id": 30,
+    "word": "from",
+    "translation": "从",
+    "difficulty": "简单",
+    "category": "介词",
+    "level": "Unit 1",
+    "image": "from.jpeg",
+    "phonetic": "/frɒm/"
+  },
+  {
+    "id": 31,
+    "word": "twin",
+    "translation": "双胞胎",
+    "difficulty": "简单",
+    "category": "名词",
+    "level": "Unit 1",
+    "image": "twin.jpeg",
+    "phonetic": "/twɪn/"
+  },
+  {
+    "id": 32,
+    "word": "he",
+    "translation": "他",
+    "difficulty": "简单",
+    "category": "代词",
+    "level": "Unit 1",
+    "image": "he.jpeg",
+    "phonetic": "/hiː/"
+  },
+  {
+    "id": 33,
+    "word": "school",
+    "translation": "学校",
+    "difficulty": "简单",
+    "category": "名词",
+    "level": "Unit 2",
+    "image": "school.jpeg",
+    "phonetic": "/skuːl/"
+  },
+  {
+    "id": 34,
+    "word": "thing",
+    "translation": "物品",
+    "difficulty": "简单",
+    "category": "名词",
+    "level": "Unit 2",
+    "image": "thing.jpeg",
+    "phonetic": "/θɪŋ/"
+  },
+  {
+    "id": 35,
+    "word": "pen",
+    "translation": "钢笔",
+    "difficulty": "简单",
+    "category": "名词",
+    "level": "Unit 2",
+    "image": "pen.jpeg",
+    "phonetic": "/pen/"
+  },
+  {
+    "id": 36,
+    "word": "pencil",
+    "translation": "铅笔",
+    "difficulty": "简单",
+    "category": "名词",
+    "level": "Unit 2",
+    "image": "pencil.jpeg",
+    "phonetic": "/ˈpensəl/"
+  },
+  {
+    "id": 37,
+    "word": "pencil case",
+    "translation": "笔袋",
+    "difficulty": "简单",
+    "category": "名词",
+    "level": "Unit 2",
+    "image": "pencil case.jpeg",
+    "phonetic": "/ˈpensəl keɪs/"
+  },
+  {
+    "id": 38,
+    "word": "bag",
+    "translation": "包",
+    "difficulty": "简单",
+    "category": "名词",
+    "level": "Unit 2",
+    "image": "bag.jpeg",
+    "phonetic": "/bæɡ/"
+  },
+  {
+    "id": 39,
+    "word": "eraser",
+    "translation": "橡皮",
+    "difficulty": "简单",
+    "category": "名词",
+    "level": "Unit 2",
+    "image": "eraser.jpg",
+    "phonetic": "/ɪˈreɪzə(r)/"
+  },
+  {
+    "id": 40,
+    "word": "schoolbag",
+    "translation": "书包",
+    "difficulty": "简单",
+    "category": "名词",
+    "level": "Unit 2",
+    "image": "schoolbag.jpeg",
+    "phonetic": "/ˈskuːlbæɡ/"
+  },
+  {
+    "id": 41,
+    "word": "guess",
+    "translation": "猜测",
+    "difficulty": "简单",
+    "category": "动词",
+    "level": "Unit 2",
+    "image": "guess.jpeg",
+    "phonetic": "/ɡes/"
+  },
+  {
+    "id": 42,
+    "word": "find",
+    "translation": "找到",
+    "difficulty": "简单",
+    "category": "动词",
+    "level": "Unit 2",
+    "image": "find.jpeg",
+    "phonetic": "/faɪnd/"
+  },
+  {
+    "id": 43,
+    "word": "colourful",
+    "translation": "多彩的",
+    "difficulty": "简单",
+    "category": "形容词",
+    "level": "Unit 3",
+    "image": "colourful.jpeg",
+    "phonetic": "/ˈkʌləfl/"
+  },
+  {
+    "id": 44,
+    "word": "world",
+    "translation": "世界",
+    "difficulty": "简单",
+    "category": "名词",
+    "level": "Unit 3",
+    "image": "word.jpeg",
+    "phonetic": "/wɜːld/"
+  },
+  {
+    "id": 45,
+    "word": "umbrella",
+    "translation": "伞",
+    "difficulty": "简单",
+    "category": "名词",
+    "level": "Unit 3",
+    "image": "umbrella.jpeg",
+    "phonetic": "/ʌmˈbrelə/"
+  },
+  {
+    "id": 46,
+    "word": "clothes",
+    "translation": "衣服",
+    "difficulty": "简单",
+    "category": "名词",
+    "level": "Unit 3",
+    "image": "clothes.jpeg",
+    "phonetic": "/kləʊðz/"
+  },
+  {
+    "id": 47,
+    "word": "red",
+    "translation": "红色",
+    "difficulty": "简单",
+    "category": "颜色",
+    "level": "Unit 3",
+    "image": "red.jpeg",
+    "phonetic": "/red/"
+  },
+  {
+    "id": 48,
+    "word": "pink",
+    "translation": "粉色",
+    "difficulty": "简单",
+    "category": "颜色",
+    "level": "Unit 3",
+    "image": "pink.jpeg",
+    "phonetic": "/pɪŋk/"
+  },
+  {
+    "id": 49,
+    "word": "green",
+    "translation": "绿色",
+    "difficulty": "简单",
+    "category": "颜色",
+    "level": "Unit 3",
+    "image": "green.jpeg",
+    "phonetic": "/ɡriːn/"
+  },
+  {
+    "id": 50,
+    "word": "yellow",
+    "translation": "黄色",
+    "difficulty": "简单",
+    "category": "颜色",
+    "level": "Unit 3",
+    "image": "yellow.jpeg",
+    "phonetic": "/ˈjeləʊ/"
+  },
+  {
+    "id": 51,
+    "word": "orange",
+    "translation": "橙色",
+    "difficulty": "简单",
+    "category": "颜色",
+    "level": "Unit 3",
+    "image": "orange.jpeg",
+    "phonetic": "/ˈɒrɪndʒ/"
+  },
+  {
+    "id": 52,
+    "word": "blue",
+    "translation": "蓝色",
+    "difficulty": "简单",
+    "category": "颜色",
+    "level": "Unit 3",
+    "image": "blue.jpeg",
+    "phonetic": "/bluː/"
+  },
+  {
+    "id": 53,
+    "word": "purple",
+    "translation": "紫色",
+    "difficulty": "简单",
+    "category": "颜色",
+    "level": "Unit 3",
+    "image": "purple.jpeg",
+    "phonetic": "/ˈpɜːpl/"
+  },
+  {
+    "id": 54,
+    "word": "rainbow",
+    "translation": "彩虹",
+    "difficulty": "简单",
+    "category": "名词",
+    "level": "Unit 3",
+    "image": "rainbow.jpeg",
+    "phonetic": "/ˈreɪnbəʊ/"
+  },
+  {
+    "id": 55,
+    "word": "magical",
+    "translation": "有魔力的",
+    "difficulty": "简单",
+    "category": "形容词",
+    "level": "Unit 3",
+    "image": "magical.jpeg",
+    "phonetic": "/ˈmædʒɪkl/"
+  },
+  {
+    "id": 56,
+    "word": "fun",
+    "translation": "有趣的",
+    "difficulty": "简单",
+    "category": "形容词",
+    "level": "Unit 3",
+    "image": "fun.jpeg",
+    "phonetic": "/fʌn/"
+  },
+  {
+    "id": 57,
+    "word": "one",
+    "translation": "一",
+    "difficulty": "简单",
+    "category": "数字",
+    "level": "Unit 4",
+    "image": "one.jpeg",
+    "phonetic": "/wʌn/"
+  },
+  {
+    "id": 58,
+    "word": "two",
+    "translation": "二",
+    "difficulty": "简单",
+    "category": "数字",
+    "level": "Unit 4",
+    "image": "two.jpeg",
+    "phonetic": "/tuː/"
+  },
+  {
+    "id": 59,
+    "word": "three",
+    "translation": "三",
+    "difficulty": "简单",
+    "category": "数字",
+    "level": "Unit 4",
+    "image": "three.jpeg",
+    "phonetic": "/θriː/"
+  },
+  {
+    "id": 60,
+    "word": "four",
+    "translation": "四",
+    "difficulty": "简单",
+    "category": "数字",
+    "level": "Unit 4",
+    "image": "four.jpeg",
+    "phonetic": "/fɔː(r)/"
+  },
+  {
+    "id": 61,
+    "word": "five",
+    "translation": "五",
+    "difficulty": "简单",
+    "category": "数字",
+    "level": "Unit 4",
+    "image": "five.jpeg",
+    "phonetic": "/faɪv/"
+  },
+  {
+    "id": 62,
+    "word": "six",
+    "translation": "六",
+    "difficulty": "简单",
+    "category": "数字",
+    "level": "Unit 4",
+    "image": "six.jpeg",
+    "phonetic": "/sɪks/"
+  },
+  {
+    "id": 63,
+    "word": "seven",
+    "translation": "七",
+    "difficulty": "简单",
+    "category": "数字",
+    "level": "Unit 4",
+    "image": "seven.jpeg",
+    "phonetic": "/ˈsevn/"
+  },
+  {
+    "id": 64,
+    "word": "eight",
+    "translation": "八",
+    "difficulty": "简单",
+    "category": "数字",
+    "level": "Unit 4",
+    "image": "eight.jpeg",
+    "phonetic": "/eɪt/"
+  },
+  {
+    "id": 65,
+    "word": "ten",
+    "translation": "十",
+    "difficulty": "简单",
+    "category": "数字",
+    "level": "Unit 4",
+    "image": "ten.jpeg",
+    "phonetic": "/ten/"
+  },
+  {
+    "id": 66,
+    "word": "eleven",
+    "translation": "十一",
+    "difficulty": "简单",
+    "category": "数字",
+    "level": "Unit 4",
+    "image": "eleven.jpeg",
+    "phonetic": "/ɪˈlevn/"
+  },
+  {
+    "id": 67,
+    "word": "twelve",
+    "translation": "十二",
+    "difficulty": "简单",
+    "category": "数字",
+    "level": "Unit 4",
+    "image": "twelve.jpeg",
+    "phonetic": "/twelv/"
+  },
+  {
+    "id": 68,
+    "word": "count",
+    "translation": "数数",
+    "difficulty": "简单",
+    "category": "动词",
+    "level": "Unit 4",
+    "image": "count.jpeg",
+    "phonetic": "/kaʊnt/"
+  },
+  {
+    "id": 69,
+    "word": "make",
+    "translation": "制作",
+    "difficulty": "简单",
+    "category": "动词",
+    "level": "Unit 4",
+    "image": "make.jpeg",
+    "phonetic": "/meɪk/"
+  },
+  {
+    "id": 70,
+    "word": "show",
+    "translation": "给……看",
+    "difficulty": "简单",
+    "category": "动词",
+    "level": "Unit 4",
+    "image": "show.jpeg",
+    "phonetic": "/ʃəʊ/"
+  },
+  {
+    "id": 71,
+    "word": "beautiful",
+    "translation": "美丽的",
+    "difficulty": "简单",
+    "category": "形容词",
+    "level": "Unit 4",
+    "image": "beatiful.jpeg",
+    "phonetic": "/ˈbjuːtɪfl/"
+  },
+  {
+    "id": 72,
+    "word": "amazing",
+    "translation": "令人惊讶的",
+    "difficulty": "简单",
+    "category": "形容词",
+    "level": "Unit 4",
+    "image": "amazing.jpeg",
+    "phonetic": "/əˈmeɪzɪŋ/"
+  },
+  {
+    "id": 73,
+    "word": "hungry",
+    "translation": "饥饿的",
+    "difficulty": "简单",
+    "category": "形容词",
+    "level": "Unit 4",
+    "image": "hungry.jpeg",
+    "phonetic": "/ˈhʌŋɡri/"
+  },
+  {
+    "id": 74,
+    "word": "big",
+    "translation": "大的",
+    "difficulty": "简单",
+    "category": "形容词",
+    "level": "Unit 4",
+    "image": "big.jpeg",
+    "phonetic": "/bɪɡ/"
+  },
+  {
+    "id": 75,
+    "word": "little",
+    "translation": "小的",
+    "difficulty": "简单",
+    "category": "形容词",
+    "level": "Unit 4",
+    "image": "little.jpeg",
+    "phonetic": "/ˈlɪtl/"
+  },
+  {
+    "id": 76,
+    "word": "bird",
+    "translation": "鸟",
+    "difficulty": "简单",
+    "category": "名词",
+    "level": "Unit 4",
+    "image": "bird.jpeg",
+    "phonetic": "/bɜːd/"
+  },
+  {
+    "id": 77,
+    "word": "egg",
+    "translation": "蛋",
+    "difficulty": "简单",
+    "category": "名词",
+    "level": "Unit 4",
+    "image": "egg.jpeg",
+    "phonetic": "/eɡ/"
+  },
+  {
+    "id": 78,
+    "word": "rope",
+    "translation": "绳",
+    "difficulty": "简单",
+    "category": "名词",
+    "level": "Unit 4",
+    "image": "rope.jpeg",
+    "phonetic": "/rəʊp/"
+  },
+  {
+    "id": 79,
+    "word": "who",
+    "translation": "谁",
+    "difficulty": "简单",
+    "category": "疑问词",
+    "level": "Unit 4",
+    "image": "who.jpeg",
+    "phonetic": "/huː/"
+  },
+  {
+    "id": 80,
+    "word": "around",
+    "translation": "环绕",
+    "difficulty": "简单",
+    "category": "介词/副词",
+    "level": "Unit 4",
+    "image": "around.jpeg",
+    "phonetic": "/əˈraʊnd/"
   }
 ] 

@@ -13,6 +13,8 @@ class DataManager {
             correctAnswers: 0,
             totalAttempts: 0
         };
+        // 可用图片列表
+        this.availableImages = new Set();
     }
 
     /**
@@ -24,6 +26,9 @@ class DataManager {
             // 加载单词数据
             await this.loadWords();
             
+            // 获取可用图片列表
+            await this.getAvailableImages();
+            
             // 创建关卡
             this.createLevels();
             
@@ -34,6 +39,35 @@ class DataManager {
         } catch (error) {
             console.error('初始化数据时出错:', error);
             return Promise.reject(error);
+        }
+    }
+
+    /**
+     * 获取可用的图片列表
+     * @returns {Promise} 加载完成的Promise
+     */
+    async getAvailableImages() {
+        try {
+            const response = await fetch('available-images.json');
+            if (response.ok) {
+                const images = await response.json();
+                this.availableImages = new Set(images);
+                return Promise.resolve();
+            } else {
+                console.warn('无法加载图片列表，将使用所有单词');
+                // 如果无法加载图片列表，则假设所有单词都有图片
+                this.words.forEach(word => {
+                    this.availableImages.add(word.image);
+                });
+                return Promise.resolve();
+            }
+        } catch (error) {
+            console.warn('加载图片列表时出错，将使用所有单词:', error);
+            // 出错时也假设所有单词都有图片
+            this.words.forEach(word => {
+                this.availableImages.add(word.image);
+            });
+            return Promise.resolve();
         }
     }
 
@@ -60,18 +94,43 @@ class DataManager {
      * 根据单词数据创建游戏关卡
      */
     createLevels() {
-        // 每个关卡包含所有的单词，但顺序不同
-        this.levels = Array.from({ length: 5 }, (_, i) => {
-            // 对单词进行浅拷贝并随机排序
-            const shuffledWords = [...this.words].sort(() => Math.random() - 0.5);
+        // 按照关卡对单词进行分组
+        const levelGroups = {};
+        
+        this.words.forEach(word => {
+            if (!levelGroups[word.level]) {
+                levelGroups[word.level] = [];
+            }
             
+            // 只添加有对应图片的单词
+            const imageName = word.image || `${word.word.toLowerCase().replace(/\s+/g, '-')}.jpeg`;
+            if (this.availableImages.has(imageName) || this.availableImages.has(imageName.replace('.jpeg', '.jpg')) || 
+                this.availableImages.has(imageName.replace('.jpeg', '.png'))) {
+                // 确保单词有对应的图片路径
+                word.image = imageName;
+                levelGroups[word.level].push(word);
+            }
+        });
+        
+        // 创建关卡数组
+        this.levels = Object.keys(levelGroups).map((levelName, index) => {
             return {
-                id: i + 1,
-                name: `第${i + 1}关`,
-                words: shuffledWords,
-                unlocked: i === 0 // 第一关默认解锁
+                id: index + 1,
+                name: levelName,
+                words: levelGroups[levelName].sort(() => Math.random() - 0.5), // 随机排序单词
+                unlocked: index === 0 // 第一关默认解锁
             };
         });
+        
+        // 如果没有关卡（可能是因为没有单词或没有图片），创建一个空关卡
+        if (this.levels.length === 0) {
+            this.levels = [{
+                id: 1,
+                name: "默认关卡",
+                words: [],
+                unlocked: true
+            }];
+        }
     }
 
     /**
